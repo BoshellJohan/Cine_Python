@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Landino",
+        "email": "Landino.com",
+        "password": "1234",
+        "num_Card": "4010 2222 1222",
+        "saldo": 1000,
+        "esAdministrador": true,
+        "reservations": []
+    },
+    {
+        "name": "Mariana",
+        "email": "mariana@example.com",
+        "password": "abc123",
+        "num_Card": "5234 1111 8888 2222",
+        "saldo": 1000,
+        "esAdministrador": false,
+        "reservations": []
+    },
+    {
+        "name": "Carlos",
+        "email": "carlos@example.com",
+        "password": "carlos_pass",
+        "num_Card": "4132 9999 0000 4444",
+        "saldo": 1000,
+        "esAdministrador": false,
+        "reservations": []
+    },
+    {
+        "name": "Ana",
+        "email": "ana@example.com",
+        "password": "password456",
+        "num_Card": "6789 5555 1234 5678",
+        "saldo": 1000,
+        "esAdministrador": true,
+        "reservations": []
+    },
+    {
+        "name": "Javier",
+        "email": "javier@example.com",
+        "password": "passJavier789",
+        "num_Card": "2345 6789 9999 0001",
+        "saldo": 1000,
+        "esAdministrador": false,
+        "reservations": []
+    },
+    {
+        "name": "Angelica",
+        "email": "angeli.com",
+        "password": "123",
+        "num_Card": "22222222000",
+        "saldo": 1000,
+        "esAdministrador": false,
+        "reservations": []
+    },
+    {
+        "name": "Juan Alejandro",
+        "email": "Alejandro@gmail.com",
+        "password": "4567",
+        "num_Card": "22222222000",
+        "saldo": 1000,
+        "esAdministrador": false,
+        "reservations": []
+    },
+    {
+        "name": "Maximiliano",
+        "email": "max@gmail.com",
+        "password": "5678",
+        "num_Card": "22222222000",
+        "saldo": 1000,
+        "esAdministrador": false,
+        "reservations": []
+    }
+]

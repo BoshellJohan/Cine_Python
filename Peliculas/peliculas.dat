@@ -1,0 +1,93 @@
+[
+    {
+        "nombre": "Pelicula 1",
+        "descripcion": "Una emocionante aventura que te mantendr\u00c3\u00a1 al borde de tu asiento.",
+        "duracion": "90",
+        "horarios": [
+            {
+                "sala": 5,
+                "hora_inicio": "10:00"
+            },
+            {
+                "sala": 5,
+                "hora_inicio": "14:00"
+            },
+            {
+                "sala": 1,
+                "hora_inicio": "16:00"
+            }
+        ]
+    },
+    {
+        "nombre": "Pelicula 2",
+        "descripcion": "Un drama cautivador sobre las relaciones humanas.",
+        "duracion": "120",
+        "horarios": [
+            {
+                "sala": 3,
+                "hora_inicio": "15:00"
+            },
+            {
+                "sala": 4,
+                "hora_inicio": "12:00"
+            }
+        ]
+    },
+    {
+        "nombre": "Pelicula 3",
+        "descripcion": "Una comedia hilarante para toda la familia.",
+        "duracion": "150",
+        "horarios": [
+            {
+                "sala": 2,
+                "hora_inicio": "18:00"
+            },
+            {
+                "sala": 5,
+                "hora_inicio": "22:00"
+            }
+        ]
+    },
+    {
+        "nombre": "Pelicula 4",
+        "descripcion": "Un thriller psicol\u00c3\u00b3gico que explora los rincones oscuros de la mente.",
+        "duracion": "80",
+        "horarios": [
+            {
+                "sala": 3,
+                "hora_inicio": "17:00"
+            },
+            {
+                "sala": 4,
+                "hora_inicio": "20:00"
+            }
+        ]
+    },
+    {
+        "nombre": "Pelicula 5",
+        "descripcion": "Un documental inspirador sobre la naturaleza y la vida silvestre.",
+        "duracion": "105",
+        "horarios": [
+            {
+                "sala": 1,
+                "hora_inicio": "11:30"
+            },
+            {
+                "sala": 3,
+                "hora_inicio": "12:30"
+            },
+            {
+                "sala": 2,
+                "hora_inicio": "14:00"
+            },
+            {
+                "sala": 4,
+                "hora_inicio": "17:10"
+            },
+            {
+                "sala": 5,
+                "hora_inicio": "17:15"
+            }
+        ]
+    }
+]

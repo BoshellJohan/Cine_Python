@@ -1,0 +1,101 @@
+[
+    {
+        "numero_sala": 1,
+        "capacidad_max": 150,
+        "letra_max": "J",
+        "numeracion_maxima": 15,
+        "horarios": {
+            "13:00": {
+                "asientos_ocupados": [
+                    "A1",
+                    "A2",
+                    "A3",
+                    "B2",
+                    "B5"
+                ]
+            },
+            "16:00": {
+                "asientos_ocupados": [
+                    "B2",
+                    "B5"
+                ]
+            }
+        }
+    },
+    {
+        "numero_sala": 2,
+        "capacidad_max": 120,
+        "letra_max": "I",
+        "numeracion_maxima": 12,
+        "horarios": {
+            "14:00": {
+                "asientos_ocupados": [
+                    "B1",
+                    "B2"
+                ]
+            },
+            "18:00": {
+                "asientos_ocupados": []
+            }
+        }
+    },
+    {
+        "numero_sala": 3,
+        "capacidad_max": 100,
+        "letra_max": "H",
+        "numeracion_maxima": 10,
+        "horarios": {
+            "12:30": {
+                "asientos_ocupados": []
+            },
+            "15:00": {
+                "asientos_ocupados": [
+                    "C1"
+                ]
+            },
+            "19:00": {
+                "asientos_ocupados": []
+            }
+        }
+    },
+    {
+        "numero_sala": 4,
+        "capacidad_max": 200,
+        "letra_max": "K",
+        "numeracion_maxima": 20,
+        "horarios": {
+            "12:00": {
+                "asientos_ocupados": []
+            },
+            "17:10": {
+                "asientos_ocupados": []
+            },
+            "20:00": {
+                "asientos_ocupados": [
+                    "D1",
+                    "D2"
+                ]
+            }
+        }
+    },
+    {
+        "numero_sala": 5,
+        "capacidad_max": 180,
+        "letra_max": "L",
+        "numeracion_maxima": 18,
+        "horarios": {
+            "10:00": {
+                "asientos_ocupados": []
+            },
+            "14:00": {
+                "asientos_ocupados": []
+            },
+            "17:15": {
+                "asientos_ocupados": []
+            },
+            "22:00": {
+                "asientos_ocupados": []
+            }
+        }
+    }
+]
