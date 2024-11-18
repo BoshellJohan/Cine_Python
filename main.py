@@ -42,9 +42,3 @@ dpg.start_dearpygui()
 
 # Limpiar el contexto al cerrar la aplicación
 dpg.destroy_context()
-
-
-'''
-Landino es un crack
-
-'''
