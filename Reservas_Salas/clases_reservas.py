@@ -32,6 +32,8 @@ class Sala:
         else:
             print("Horario no encontrado.")
 
+
+    #Método para la creación de horarios en una sala, sólo lo puede hacer un administrador.
     def verificar_disponibilidad_horarios(self, hora_inicio, duracion):
         """
         Verifica si un nuevo horario puede agregarse sin superponer con los existentes.
