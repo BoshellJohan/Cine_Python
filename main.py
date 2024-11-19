@@ -19,12 +19,26 @@ gestor_cine.cargar_salas_archivo()
 gestor_cine.cargar_peliculas_archivo()
 
 
-# Configuración de la ventana principal y el popup de inicio de sesión
-with dpg.window(label="Ventana Principal", width=1500, height=1000):
-    dpg.add_button(label="Iniciar sesión", callback=lambda: open_popup_sign_in(gestor_cine))
-    dpg.add_button(label="Crear una cuenta", tag="create_account_direction", callback=lambda: open_popup_create_account(gestor_cine))
+with dpg.window(label="Ventana Principal", width=1600, height=800):
+    # Sección superior: Botones de inicio y creación de cuenta
+    with dpg.group(horizontal=False):
+        dpg.add_button(label="Iniciar sesión", callback=lambda: open_popup_sign_in(gestor_cine))
+        dpg.add_button(label="Crear una cuenta", tag="create_account_direction", callback=lambda: open_popup_create_account(gestor_cine))
+
+    # Espaciador para separar visualmente
+    dpg.add_spacer(height=20)
+
+    # Texto de información del administrador
     dpg.add_text("Administrador activo", show=False, tag="Info_admin_en_principal", color=(0, 255, 0, 255))
-    mostrar_cartelera(gestor_cine.lista_peliculas)
+
+    # Espaciador para separar la cartelera
+    dpg.add_spacer(height=30)
+
+    # Sección inferior: Cartelera de películas
+    with dpg.group(horizontal=False):
+        dpg.add_text("Cartelera de Películas", color=(255, 255, 255, 255), bullet=True)
+        mostrar_cartelera(gestor_cine)
+
 
 
 

@@ -5,16 +5,16 @@
         "duracion": "90",
         "horarios": [
             {
-                "sala": 5,
-                "hora_inicio": "10:00"
-            },
-            {
-                "sala": 5,
-                "hora_inicio": "14:00"
+                "sala": 1,
+                "hora_inicio": "13:00"
             },
             {
                 "sala": 1,
                 "hora_inicio": "16:00"
+            },
+            {
+                "sala": 2,
+                "hora_inicio": "14:00"
             }
         ]
     },
@@ -24,7 +24,7 @@
         "duracion": "120",
         "horarios": [
             {
-                "sala": 3,
+                "sala": 2,
                 "hora_inicio": "15:00"
             },
             {
@@ -55,7 +55,7 @@
         "horarios": [
             {
                 "sala": 3,
-                "hora_inicio": "17:00"
+                "hora_inicio": "15:00"
             },
             {
                 "sala": 4,
