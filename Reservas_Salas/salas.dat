@@ -1,4 +1,4 @@
-[
+ [
     {
         "numero_sala": 1,
         "capacidad_max": 150,
@@ -93,7 +93,7 @@
             "17:15": {
                 "asientos_ocupados": []
             },
-            "22:00": {
+            "23:00": {
                 "asientos_ocupados": []
             }
         }

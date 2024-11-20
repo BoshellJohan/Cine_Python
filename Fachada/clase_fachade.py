@@ -1,7 +1,7 @@
 import json
 from Interfaz_Usuario.clase_usuario import User
 from Reservas_Salas.clases_reservas import Gestor_Archivo_Salas
-from Peliculas.clases_pelicula import Cartelera
+from Peliculas.clases_pelicula import Cartelera, Pelicula
 
 class Sistema_Cine:
     def __init__(self, filepath_users, filepath_salas, filepath_peliculas):
@@ -36,6 +36,7 @@ class Sistema_Cine:
     def agregar_nuevo_usuario(self, usuario):
         if not self.existencia_usuario(usuario):
             self.lista_usuarios.append(usuario)
+            self.guardar_usuarios_archivo()
             return True
         return False
 
@@ -60,6 +61,11 @@ class Sistema_Cine:
 
     def guardar_peliculas_archivo(self):
         self.archivo_peliculas.guardar_peliculas(self.lista_peliculas)
+
+    def agregar_pelicula_lista(self, nombre, descripcion, duracion):
+        self.lista_peliculas.append(Pelicula(nombre, descripcion, duracion, []))
+        self.guardar_peliculas_archivo()
+
 
 
     #Métodos que se eliminarán
