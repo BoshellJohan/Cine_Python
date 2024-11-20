@@ -1,8 +1,10 @@
 # creacioncuenta.py
 import dearpygui.dearpygui as dpg
 from .clase_usuario import User
-from .inicio_sesion import close_popup_in_x_seconds, hide_item
+from .inicio_sesion import hide_item
 from Fachada.clase_fachade import Sistema_Cine
+from Funciones.funciones_generales_ventanas import close_popup_in_x_seconds
+
 
 
 def clear_input_text(name_input, show_input=False):
@@ -26,9 +28,8 @@ def open_popup_create_account(gestor_cine: Sistema_Cine):
 def save_new_user_in_DB(gestor_cine: Sistema_Cine, user):
     gestor_cine.usuario_en_sesion = True
     gestor_cine.user = user
-    gestor_cine.agregar_nuevo_usuario(user) #Agregar usuario a la lista
-    gestor_cine.guardar_usuarios_archivo() #Actualizar archivo
-    # gestor_cine.ver_usuarios()
+    gestor_cine.agregar_nuevo_usuario(user) #Agregar usuario a la lista y la guarda en el archivo
+
 
 
 

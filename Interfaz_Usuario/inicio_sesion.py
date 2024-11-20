@@ -1,13 +1,8 @@
 import dearpygui.dearpygui as dpg
-import threading
 from .clase_usuario import User
 from Fachada.clase_fachade import Sistema_Cine
-
-
-
-# Función de temporizador para cerrar la ventana después de 4 segundos
-def close_popup_in_x_seconds(sec, window):
-    threading.Timer(sec, lambda: dpg.hide_item(window)).start()
+from Peliculas.Interfaz_Cartelera import open_popup_cartelera
+from Funciones.funciones_generales_ventanas import close_popup_in_x_seconds
 
 def hide_item(item):
     dpg.hide_item(item)
@@ -56,7 +51,10 @@ def sign_in(sender, app_data, user_data):
         if user.esAdministrador: #Es administrador?
             gestor_cine.administrador_activo = True
             dpg.configure_item("Info_admin_en_principal", show=True)
+            dpg.configure_item("button_agregar_pelicula_admin", show=True)
+            open_popup_cartelera(gestor_cine)
             gestor_cine.ver_info_admins()
+
         else:
             gestor_cine.administrador_activo = False
 
@@ -78,6 +76,7 @@ def log_out(sender, app_data, user_data):
     dpg.configure_item("user_credentials", show=False, default_value="")
     dpg.configure_item("create_account_direction", show=True)
     dpg.configure_item("Info_admin_en_principal", show=False)
+    dpg.configure_item("button_agregar_pelicula_admin", show=False)
 
     dpg.show_item("create_account_direction") #Mostrar nuevamente el botón de crear cuenta
     close_popup_in_x_seconds(2, "popup_window")

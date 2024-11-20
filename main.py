@@ -2,7 +2,7 @@ import dearpygui.dearpygui as dpg
 from Interfaz_Usuario.inicio_sesion import open_popup_sign_in, setup_popup_signin_window
 from Interfaz_Usuario.creacion_cuenta import setup_popup_create_account_window, open_popup_create_account
 from Fachada.clase_fachade import Sistema_Cine
-from Peliculas.Interfaz_Cartelera import mostrar_cartelera
+from Peliculas.Interfaz_Cartelera import open_popup_cartelera, mostrar_cartelera
 
 # Inicializar DearPyGui
 dpg.create_context()
@@ -38,6 +38,9 @@ with dpg.window(label="Ventana Principal", width=1600, height=800):
     with dpg.group(horizontal=False):
         dpg.add_text("Cartelera de Películas", color=(255, 255, 255, 255), bullet=True)
         mostrar_cartelera(gestor_cine)
+        open_popup_cartelera(gestor_cine)
+
+
 
 
 
@@ -50,6 +53,7 @@ setup_popup_signin_window(gestor_cine)
 
 
 # Mostrar y mantener la ventana abierta
+
 dpg.setup_dearpygui()
 dpg.show_viewport()
 dpg.start_dearpygui()

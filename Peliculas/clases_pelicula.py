@@ -31,9 +31,6 @@ class Cartelera:
     def __init__(self, filepath):
         self.filepath = filepath
 
-    def mostrar_peliculas_interfaz(self):
-        pass
-
 
     def guardar_peliculas(self, lista_peliculas):
         try:
@@ -93,24 +90,3 @@ class Cartelera:
 
 
 
-
-
-# # Configuración de Dear PyGui
-# dpg.create_context()
-
-# # Mostrar la cartelera si se cargaron películas
-# if peliculas:
-#     mostrar_cartelera(peliculas)
-# else:
-#     print("No se pudieron cargar las películas.")
-
-# # Crear la ventana y mostrar la vista
-# dpg.create_viewport(title="Sistema de Gestión de Cine", width=800, height=600)
-# dpg.setup_dearpygui()
-# dpg.show_viewport()
-
-# # Iniciar el bucle de eventos
-# dpg.start_dearpygui()
-
-# # Cerrar contexto
-# dpg.destroy_context()
