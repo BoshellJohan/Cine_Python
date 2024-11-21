@@ -33,6 +33,9 @@ class User:
                 for asiento in valor:
                     print(f"{asiento}\t", end=" ")
 
+    def agregar_reserva(self, hora_inicio, lista_asientos):
+        self.reservations.append({"hora_inicio": hora_inicio, "lista_asientos": lista_asientos})
+
 
 class Administrador(User):
     def __init__(self, name, email, password, num_Card, reservations, esAdministrador):

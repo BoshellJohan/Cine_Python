@@ -15,6 +15,7 @@ class Sistema_Cine:
         #Atributos referentes a Salas y Reservas
         self.archivo_salas = Gestor_Archivo_Salas(filepath_salas)
         self.lista_salas = []
+        self.lista_compra_asientos = []
 
         #Atributos referentes a Peliculas
         self.archivo_peliculas = Cartelera(filepath_peliculas)

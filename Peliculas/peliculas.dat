@@ -24,6 +24,14 @@
         "duracion": "120",
         "horarios": [
             {
+                "sala": 1,
+                "hora_inicio": "07:00"
+            },
+            {
+                "sala": 1,
+                "hora_inicio": "10:00"
+            },
+            {
                 "sala": 2,
                 "hora_inicio": "14:00"
             },
@@ -45,6 +53,14 @@
             {
                 "sala": 4,
                 "hora_inicio": "17:10"
+            },
+            {
+                "sala": 1,
+                "hora_inicio": "21:00"
+            },
+            {
+                "sala": 3,
+                "hora_inicio": "23:00"
             }
         ]
     },
@@ -54,12 +70,20 @@
         "duracion": "80",
         "horarios": [
             {
+                "sala": 2,
+                "hora_inicio": "07:00"
+            },
+            {
                 "sala": 4,
                 "hora_inicio": "12:00"
             },
             {
                 "sala": 3,
                 "hora_inicio": "15:00"
+            },
+            {
+                "sala": 2,
+                "hora_inicio": "21:00"
             }
         ]
     },
@@ -95,5 +119,16 @@
         "descripcion": "Innovadora experiencia en el m\u00e1s all\u00e1",
         "duracion": "120",
         "horarios": []
+    },
+    {
+        "nombre": "DeadPool I",
+        "descripcion": "DeadPool I: M\u00e1s sangre que nunca antes",
+        "duracion": "110",
+        "horarios": [
+            {
+                "sala": 1,
+                "hora_inicio": "01:00"
+            }
+        ]
     }
 ]

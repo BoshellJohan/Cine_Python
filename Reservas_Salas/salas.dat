@@ -1,24 +1,54 @@
- [
+[
     {
         "numero_sala": 1,
         "capacidad_max": 150,
         "letra_max": "J",
         "numeracion_maxima": 15,
         "horarios": {
+            "01:00": {
+                "asientos_ocupados": []
+            },
+            "04:00": {
+                "asientos_ocupados": []
+            },
+            "07:00": {
+                "asientos_ocupados": [
+                    "A3",
+                    "A4"
+                ]
+            },
+            "10:00": {
+                "asientos_ocupados": [
+                    "A14",
+                    "A15",
+                    "G7"
+                ]
+            },
             "13:00": {
                 "asientos_ocupados": [
                     "A1",
                     "A2",
                     "A3",
                     "B2",
-                    "B5"
+                    "B5",
+                    "A4",
+                    "A7",
+                    "A5",
+                    "B11",
+                    "B12",
+                    "J10",
+                    "J13"
                 ]
             },
             "16:00": {
                 "asientos_ocupados": [
                     "B2",
-                    "B5"
+                    "B5",
+                    "A5"
                 ]
+            },
+            "21:00": {
+                "asientos_ocupados": []
             }
         }
     },
@@ -28,6 +58,19 @@
         "letra_max": "I",
         "numeracion_maxima": 12,
         "horarios": {
+            "05:00": {
+                "asientos_ocupados": [
+                    "I10",
+                    "I11",
+                    "A3"
+                ]
+            },
+            "07:00": {
+                "asientos_ocupados": []
+            },
+            "10:00": {
+                "asientos_ocupados": []
+            },
             "14:00": {
                 "asientos_ocupados": [
                     "B1",
@@ -35,6 +78,9 @@
                 ]
             },
             "18:00": {
+                "asientos_ocupados": []
+            },
+            "21:00": {
                 "asientos_ocupados": []
             }
         }
@@ -54,6 +100,11 @@
                 ]
             },
             "19:00": {
+                "asientos_ocupados": [
+                    "A10"
+                ]
+            },
+            "23:00": {
                 "asientos_ocupados": []
             }
         }
@@ -65,10 +116,18 @@
         "numeracion_maxima": 20,
         "horarios": {
             "12:00": {
-                "asientos_ocupados": []
+                "asientos_ocupados": [
+                    "A5",
+                    "A8",
+                    "A9"
+                ]
             },
             "17:10": {
-                "asientos_ocupados": []
+                "asientos_ocupados": [
+                    "A7",
+                    "A1",
+                    "K11"
+                ]
             },
             "20:00": {
                 "asientos_ocupados": [
@@ -85,7 +144,10 @@
         "numeracion_maxima": 18,
         "horarios": {
             "10:00": {
-                "asientos_ocupados": []
+                "asientos_ocupados": [
+                    "A1",
+                    "A2"
+                ]
             },
             "14:00": {
                 "asientos_ocupados": []

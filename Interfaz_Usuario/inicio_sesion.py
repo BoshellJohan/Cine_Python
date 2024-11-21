@@ -1,7 +1,7 @@
 import dearpygui.dearpygui as dpg
 from .clase_usuario import User
 from Fachada.clase_fachade import Sistema_Cine
-from Peliculas.Interfaz_Cartelera import open_popup_cartelera
+from Peliculas.Interfaz_Administrador import open_popup_cartelera
 from Funciones.funciones_generales_ventanas import close_popup_in_x_seconds
 
 def hide_item(item):
@@ -9,6 +9,7 @@ def hide_item(item):
 
 # Define la función para abrir la ventana emergente
 def open_popup_sign_in(gestor_cine: Sistema_Cine):
+
     if gestor_cine.usuario_en_sesion:
         # Si ya está autenticado, mostrar solo el botón de cerrar sesión
         dpg.configure_item("username", show=False)
@@ -20,9 +21,19 @@ def open_popup_sign_in(gestor_cine: Sistema_Cine):
         if gestor_cine.administrador_activo == True:
             text = f"Administrador: {gestor_cine.user.name}\nSaldo: {gestor_cine.user.saldo}"
         else:
-            text = f"Usuario: {gestor_cine.user.name}\nSaldo: {gestor_cine.user.saldo}"
+            text = f"Usuario: {gestor_cine.user.name}\nSaldo: {gestor_cine.user.saldo}\nReservas:"
+
+            # Si hay reservas, listarlas
+            reservas = gestor_cine.user.reservations
+            if reservas:
+                for reserva in reservas:
+                    text += f"\n- {reserva['hora_inicio']} - Asientos: {', '.join(reserva['lista_asientos'])}"
+            else:
+                text += "\nNo tienes reservas."
+
         dpg.configure_item("user_credentials", default_value=text, show=True)
     else:
+        dpg.configure_item("mensaje_sesion_no_iniciada", show=False)
         # Mostrar los campos de entrada y botón de inicio de sesión
         dpg.configure_item("username", show=True)
         dpg.set_value("username", "")
@@ -52,12 +63,14 @@ def sign_in(sender, app_data, user_data):
             gestor_cine.administrador_activo = True
             dpg.configure_item("Info_admin_en_principal", show=True)
             dpg.configure_item("button_agregar_pelicula_admin", show=True)
+
             open_popup_cartelera(gestor_cine)
             gestor_cine.ver_info_admins()
 
         else:
             gestor_cine.administrador_activo = False
 
+        dpg.configure_item("iniciar_sesion_ventana_principal", label="Informacion Cuenta")
         dpg.configure_item("message_text", default_value="Inicio de sesión exitoso.")
         dpg.configure_item("create_account_direction", show=False)
         close_popup_in_x_seconds(2, "popup_window")  # Cerrar la ventana después de 4 segundos
@@ -78,12 +91,14 @@ def log_out(sender, app_data, user_data):
     dpg.configure_item("Info_admin_en_principal", show=False)
     dpg.configure_item("button_agregar_pelicula_admin", show=False)
 
+    dpg.configure_item("iniciar_sesion_ventana_principal", label="Iniciar Sesion")
+
     dpg.show_item("create_account_direction") #Mostrar nuevamente el botón de crear cuenta
     close_popup_in_x_seconds(2, "popup_window")
 
 # Crear la ventana emergente como una ventana modal oculta inicialmente
 def setup_popup_signin_window(gestor_cine):
-    with dpg.window(label="Inicio de Sesión", modal=True, show=False, tag="popup_window", width=500, height=200, pos=(800, 0)):
+    with dpg.window(label="Inicio de Sesión", modal=True, show=False, tag="popup_window", width=600, height=200, pos=(800, 0)):
         dpg.add_text("Ingrese sus credenciales", tag="message_text")  # Texto de mensaje
         dpg.add_text("", tag="user_credentials", show=False)
         dpg.add_input_text(tag="username", label="Correo")
