@@ -6,7 +6,23 @@
         "num_Card": "4010 2222 1222",
         "saldo": 1000,
         "esAdministrador": true,
-        "reservations": []
+        "reservations": [
+            {
+                "hora_inicio": "07:00",
+                "lista_asientos": [
+                    "A3",
+                    "A4"
+                ]
+            },
+            {
+                "hora_inicio": "10:00",
+                "lista_asientos": [
+                    "A14",
+                    "A15",
+                    "G7"
+                ]
+            }
+        ]
     },
     {
         "name": "Mariana",
@@ -51,7 +67,35 @@
         "num_Card": "22222222000",
         "saldo": 1000,
         "esAdministrador": false,
-        "reservations": []
+        "reservations": [
+            {
+                "hora_inicio": "10:00",
+                "lista_asientos": [
+                    "A1",
+                    "A2"
+                ]
+            },
+            {
+                "hora_inicio": "16:00",
+                "lista_asientos": [
+                    "A5"
+                ]
+            },
+            {
+                "hora_inicio": "19:00",
+                "lista_asientos": [
+                    "A10"
+                ]
+            },
+            {
+                "hora_inicio": "05:00",
+                "lista_asientos": [
+                    "I10",
+                    "I11",
+                    "A3"
+                ]
+            }
+        ]
     },
     {
         "name": "Juan Alejandro",

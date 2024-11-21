@@ -2,11 +2,17 @@ import dearpygui.dearpygui as dpg
 from Interfaz_Usuario.inicio_sesion import open_popup_sign_in, setup_popup_signin_window
 from Interfaz_Usuario.creacion_cuenta import setup_popup_create_account_window, open_popup_create_account
 from Fachada.clase_fachade import Sistema_Cine
-from Peliculas.Interfaz_Cartelera import open_popup_cartelera, mostrar_cartelera
+from Peliculas.Interfaz_Cartelera import mostrar_cartelera
+from Peliculas.Interfaz_Administrador import open_popup_cartelera
+
+
+
 
 # Inicializar DearPyGui
 dpg.create_context()
 dpg.create_viewport(title="Aplicación de Inicio de Sesión", width=800, height=600)
+
+
 
 filepath_salas = "./Reservas_Salas/salas.dat"
 filepath_users = "./Fachada/usuarios.dat"
@@ -22,11 +28,11 @@ gestor_cine.cargar_peliculas_archivo()
 with dpg.window(label="Ventana Principal", width=1600, height=800):
     # Sección superior: Botones de inicio y creación de cuenta
     with dpg.group(horizontal=False):
-        dpg.add_button(label="Iniciar sesión", callback=lambda: open_popup_sign_in(gestor_cine))
+        dpg.add_button(label="Iniciar sesión", tag="iniciar_sesion_ventana_principal",callback=lambda: open_popup_sign_in(gestor_cine))
         dpg.add_button(label="Crear una cuenta", tag="create_account_direction", callback=lambda: open_popup_create_account(gestor_cine))
 
     # Espaciador para separar visualmente
-    dpg.add_spacer(height=20)
+    dpg.add_spacer(width=20)
 
     # Texto de información del administrador
     dpg.add_text("Administrador activo", show=False, tag="Info_admin_en_principal", color=(0, 255, 0, 255))

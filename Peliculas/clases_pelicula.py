@@ -11,17 +11,17 @@ class Pelicula:
 
 
     def agregar_horario(self, hora_inicio, lista_salas):
-        operacion = False
         for sala in lista_salas:
             if sala.verificar_disponibilidad_horarios(hora_inicio, self.duracion):
                 sala.agregar_horario_funcion(hora_inicio)
                 self.horarios.append({"sala": sala.numero_sala, "hora_inicio": hora_inicio})
                 self.horarios = sorted(self.horarios, key=lambda x: x["hora_inicio"])
-                operacion = True
+
                 print("Se ha añadido el horario para la pelicula correctamente")
-                break
-        if not operacion:
-            print(f"Ninguna sala esta disponible en ese horario para la pelicula {self.nombre}")
+                return True
+
+        print(f"Ninguna sala esta disponible en ese horario para la pelicula {self.nombre}")
+        return False
 
 
 
