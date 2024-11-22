@@ -8,7 +8,7 @@ def comprobar_compra(sender, app_data, user_data):
     ventana_tag = user_data[3]
     precio_a_pagar = gestor_cine.cant_boletas * gestor_cine.precio_boleta
 
-    if len(gestor_cine.lista_compra_asientos) > 0:
+    if len(gestor_cine.lista_compra_asientos) > 0 and gestor_cine.cant_boletas > 0:
         if gestor_cine.user.saldo > precio_a_pagar:
             #Guardar en el archivo la lista de asientos reservados
             obj_sala.agregar_asientos_ocupados(hora_inicio, gestor_cine.lista_compra_asientos)
@@ -21,11 +21,11 @@ def comprobar_compra(sender, app_data, user_data):
 
             dpg.configure_item("Resultado_de_compra", show = True, default_value="Compra realizada con exito.", color=(0,255,0, 255))
             print(gestor_cine.lista_compra_asientos)
+            cerrar_ventana_reservas_in_x_segundos(3, ventana_tag, obj_sala)
         else:
             dpg.configure_item("Resultado_de_compra", show = True, default_value="El saldo de la tarjeta no es suficiente para pagar las boletas.", color=(255,0,0, 255))
 
     else:
         dpg.configure_item("Resultado_de_compra", show = True, default_value="No se han seleccionado asientos para comprar.", color=(255,0,0, 255))
 
-    # close_popup_in_x_seconds(2, )
-    cerrar_ventana_reservas_in_x_segundos(2, ventana_tag, obj_sala)
+

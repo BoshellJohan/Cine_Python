@@ -74,6 +74,7 @@ def agregar_asiento_carrito(sender, app_data, user_data):
         print(f"Asiento Des-seleccionado: {asiento.tag}")
         dpg.bind_item_theme(sender, tema_disponible)
         asiento.presionado = False
+        gestor_cine.lista_compra_asientos.remove(asiento.tag)
 
         gestor_cine.cant_boletas -= 1
         dpg.configure_item("compra_info", default_value=f"Precio: {gestor_cine.cant_boletas * gestor_cine.precio_boleta}, Boletas: {gestor_cine.cant_boletas}")
