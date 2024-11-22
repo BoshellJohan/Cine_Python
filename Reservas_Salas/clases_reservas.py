@@ -23,7 +23,7 @@ class Sala:
         else:
             self.horarios[hora_inicio] = {"asientos_ocupados": []}
             self.ordenar_horarios_sala()
-            print(f"Horario {hora_inicio} agregado exitosamente para la sala.")
+            # print(f"Horario {hora_inicio} agregado exitosamente para la sala.")
 
 
     def agregar_asientos_ocupados(self, hora_de_inicio, asientos):
@@ -33,13 +33,13 @@ class Sala:
             print("Horario no encontrado.")
 
 
-    #Método para la creación de horarios en una sala, sólo lo puede hacer un administrador.
+    #Metodo para la creacion de horarios en una sala, solo lo puede hacer un administrador.
     def verificar_disponibilidad_horarios(self, hora_inicio, duracion):
         """
         Verifica si un nuevo horario puede agregarse sin superponer con los existentes.
-        :param hora_inicio: Hora de inicio de la nueva función en formato "HH:MM".
-        :param duracion: Duración de la nueva función en minutos.
-        :return: True si el horario está disponible, False en caso contrario.
+        :param hora_inicio: Hora de inicio de la nueva funcion en formato "HH:MM".
+        :param duracion: Duracion de la nueva funcion en minutos.
+        :return: True si el horario esta disponible, False en caso contrario.
         """
         # Convertir la hora de inicio a minutos
         hora_inicio_minutos = int(hora_inicio[:2]) * 60 + int(hora_inicio[3:])
@@ -49,15 +49,15 @@ class Sala:
         for horario_existente in self.horarios.keys():
             # Convertir la hora existente a minutos
             hora_existente_minutos = int(horario_existente[:2]) * 60 + int(horario_existente[3:])
-            hora_existente_fin = hora_existente_minutos + 180  # Supone duración estándar de 2 horas
+            hora_existente_fin = hora_existente_minutos + 180  # Supone duracion estandar de 2 horas
 
-            # Verificar superposición
+            # Verificar superposicion
             if not (hora_fin_minutos <= hora_existente_minutos or hora_inicio_minutos >= hora_existente_fin):
                 print(f"Conflicto con el horario existente: {horario_existente}")
                 return False
 
-        # Si no hay conflictos, el horario está disponible
-        print(f"El horario solicitado está disponible en la sala {self.numero_sala}.")
+        # Si no hay conflictos, el horario esta disponible
+        print(f"El horario solicitado esta disponible en la sala {self.numero_sala}.")
         return True
 
 
@@ -83,7 +83,7 @@ class Gestor_Archivo_Salas:
                 salas_data = json.load(file)
                 return [self._diccionario_a_sala(data) for data in salas_data]
         except FileNotFoundError:
-            print("Archivo no encontrado. Se cargará una lista vacía.")
+            print("Archivo no encontrado. Se cargara una lista vacia.")
             return []
 
     def _sala_a_diccionario(self, sala: Sala):
@@ -92,7 +92,7 @@ class Gestor_Archivo_Salas:
             "capacidad_max": sala.capacidad_max,
             "letra_max": sala.letra_max,
             "numeracion_maxima": sala.numeracion_maxima,
-            "horarios": sala.horarios  # No es necesario procesar más allá
+            "horarios": sala.horarios  # No es necesario procesar mas alla
         }
 
     def _diccionario_a_sala(self, data):

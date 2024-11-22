@@ -3,7 +3,7 @@ import dearpygui.dearpygui as dpg
 
 
 
-# Función de temporizador para cerrar la ventana después de 4 segundos
+# Funcion de temporizador para cerrar la ventana despues de 4 segundos
 def close_popup_in_x_seconds(sec, window):
     threading.Timer(sec, lambda: dpg.hide_item(window)).start()
 
@@ -12,7 +12,7 @@ def cerrar_ventana_reservas_in_x_segundos(sec, ventana_tag, sala_funcion):
 
 
 def eliminar_ventana_y_asientos(ventana_tag, sala_funcion):
-    # Se asegura de que la eliminación se haga en el hilo principal
+    # Se asegura de que la eliminacion se haga en el hilo principal
     # dpg.add_item_dirty(ventana_tag)  # Esto asegura que se ejecuta en el hilo principal.
 
     # Eliminar la ventana

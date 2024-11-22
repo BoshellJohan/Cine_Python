@@ -27,7 +27,7 @@ class Pelicula:
 
 
 
-class Cartelera:
+class Gestor_Archivo_Peliculas:
     def __init__(self, filepath):
         self.filepath = filepath
 
@@ -37,26 +37,26 @@ class Cartelera:
             # Convertir cada objeto `Pelicula` a diccionario para almacenar en JSON
             peliculas_data = [self._pelicula_a_diccionario(pelicula) for pelicula in lista_peliculas]
 
-            # Escribir datos de películas en el archivo JSON
+            # Escribir datos de peliculas en el archivo JSON
             with open(self.filepath, 'w') as file:
                 json.dump(peliculas_data, file, indent=4)
-            print("Películas guardadas exitosamente.")
+            print("Peliculas guardadas exitosamente.")
         except Exception as e:
-            print(f"Error al guardar las películas: {e}")
+            print(f"Error al guardar las peliculas: {e}")
 
 
 
     def cargar_peliculas(self):
         try:
-            # Leer datos de películas desde el archivo JSON
+            # Leer datos de peliculas desde el archivo JSON
             with open(self.filepath, 'r') as file:
                 peliculas_data = json.load(file)
                 return [self._diccionario_a_pelicula(data) for data in peliculas_data]
         except FileNotFoundError:
-            print("Archivo no encontrado. Se cargará una lista vacía.")
+            print("Archivo no encontrado. Se cargara una lista vacia.")
             return []
         except json.JSONDecodeError:
-            print("Error: el archivo no tiene un formato JSON válido.")
+            print("Error: el archivo no tiene un formato JSON valido.")
             return []
 
 
@@ -79,12 +79,6 @@ class Cartelera:
             horarios=data["horarios"]
         )
 
-    #Eliminar al final
-    def ver_peliculas(self, lista_peliculas):
-        for pelicula in lista_peliculas:
-            print(f"\nNombre: {pelicula.nombre}, Duracion: {pelicula.duracion}")
-            for horario in pelicula.horarios:
-                print(f"Horario {horario["hora_inicio"]} en la sala {horario["sala"]}")
 
 
 

@@ -19,8 +19,8 @@ def comprobar_compra(sender, app_data, user_data):
             gestor_cine.user.saldo -= precio_a_pagar
             gestor_cine.guardar_usuarios_archivo()
 
-            dpg.configure_item("Resultado_de_compra", show = True, default_value="Compra realizada con exito.", color=(0,255,0, 255))
-            print(gestor_cine.lista_compra_asientos)
+            dpg.configure_item("Resultado_de_compra", show = True, default_value="Compra realizada con exito.", color=(93, 162, 51, 255))
+            
             cerrar_ventana_reservas_in_x_segundos(3, ventana_tag, obj_sala)
         else:
             dpg.configure_item("Resultado_de_compra", show = True, default_value="El saldo de la tarjeta no es suficiente para pagar las boletas.", color=(255,0,0, 255))

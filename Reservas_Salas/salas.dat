@@ -18,9 +18,6 @@
                     "A6"
                 ]
             },
-            "04:00": {
-                "asientos_ocupados": []
-            },
             "07:00": {
                 "asientos_ocupados": [
                     "A3",
@@ -73,29 +70,21 @@
         "letra_max": "I",
         "numeracion_maxima": 12,
         "horarios": {
-            "05:00": {
-                "asientos_ocupados": [
-                    "I10",
-                    "I11",
-                    "A3"
-                ]
-            },
-            "07:00": {
-                "asientos_ocupados": []
-            },
-            "10:00": {
+            "11:00": {
                 "asientos_ocupados": []
             },
             "14:00": {
                 "asientos_ocupados": [
                     "B1",
-                    "B2"
+                    "B2",
+                    "D6",
+                    "E7",
+                    "F8",
+                    "E9",
+                    "D10"
                 ]
             },
             "18:00": {
-                "asientos_ocupados": []
-            },
-            "21:00": {
                 "asientos_ocupados": []
             }
         }
@@ -136,7 +125,24 @@
                 ]
             },
             "12:30": {
-                "asientos_ocupados": []
+                "asientos_ocupados": [
+                    "C9",
+                    "G6",
+                    "D3",
+                    "D6",
+                    "D3",
+                    "D6",
+                    "D3",
+                    "D6",
+                    "D3",
+                    "D6",
+                    "D3",
+                    "D6",
+                    "D3",
+                    "D6",
+                    "D3",
+                    "D6"
+                ]
             },
             "15:00": {
                 "asientos_ocupados": [
