@@ -2,6 +2,7 @@ import dearpygui.dearpygui as dpg
 from Funciones.funciones_generales_ventanas import close_popup_in_x_seconds
 import re
 
+
 # Función para cerrar u ocultar la ventana de película
 def cerrar_ventana(sender, app_data, user_data):
     info_ventana = user_data
@@ -44,9 +45,14 @@ def agregar_nueva_pelicula(sender, app_data, user_data):
         gestor_cine.agregar_pelicula_lista(nombre, descripcion, duracion)
         dpg.configure_item("confirmacion_de_agregar_pelicula", color=(0, 255, 0, 255), show=True, default_value="Pelicula agregada con exito a la cartelera")
         close_popup_in_x_seconds(3, "window_agregar_pelicula")
-        cerrar_ventana("window_agregar_pelicula")
+        dpg.hide_item("window_agregar_pelicula")
+        clear_inputs()
+
+        dpg.configure_item("mensaje_sesion_no_iniciada", default_value=f"La nueva pelicula '{nombre}' estara disponible en la cartelera al reiniciar el programa.", color=(0,255,0,255), show=True)
     else:
         dpg.configure_item("confirmacion_de_agregar_pelicula", default_value=f"Los campos no se han rellenado correctamente.", show=True, color=(255, 0, 0, 255))
+
+
 
 
 

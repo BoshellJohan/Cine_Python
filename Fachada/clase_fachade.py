@@ -16,6 +16,8 @@ class Sistema_Cine:
         self.archivo_salas = Gestor_Archivo_Salas(filepath_salas)
         self.lista_salas = []
         self.lista_compra_asientos = []
+        self.cant_boletas = 0
+        self.precio_boleta = 45
 
         #Atributos referentes a Peliculas
         self.archivo_peliculas = Cartelera(filepath_peliculas)

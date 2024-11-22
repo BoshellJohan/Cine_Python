@@ -14,7 +14,7 @@ class User:
         self.tarjeta = Tarjeta(num_Card)
         self.reservations = reservations
         self.esAdministrador = esAdministrador
-        self.saldo = self.tarjeta.saldo
+        self.saldo = saldo
 
 
     def consultar_saldo(self):

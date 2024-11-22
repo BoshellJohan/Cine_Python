@@ -56,6 +56,8 @@ def create_account(sender, app_data, user_data):
             close_popup_in_x_seconds(2,"popup_window_create_account")
             hide_item("create_account_button")
             hide_item("create_account_direction")
+
+            dpg.configure_item("iniciar_sesion_ventana_principal", label="Informacion Cuenta")
         else:
             dpg.set_value("create_email", "")
             dpg.configure_item("message_error_account", default_value=f"El correo {email} ya se encuentra registrado.", show=True, color=(255, 0, 0, 255))

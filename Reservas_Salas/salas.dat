@@ -6,7 +6,17 @@
         "numeracion_maxima": 15,
         "horarios": {
             "01:00": {
-                "asientos_ocupados": []
+                "asientos_ocupados": [
+                    "A7",
+                    "A15",
+                    "J12",
+                    "J12",
+                    "J10",
+                    "J13",
+                    "I11",
+                    "I12",
+                    "A6"
+                ]
             },
             "04:00": {
                 "asientos_ocupados": []
@@ -14,7 +24,9 @@
             "07:00": {
                 "asientos_ocupados": [
                     "A3",
-                    "A4"
+                    "A4",
+                    "G1",
+                    "G2"
                 ]
             },
             "10:00": {
@@ -37,7 +49,10 @@
                     "B11",
                     "B12",
                     "J10",
-                    "J13"
+                    "J13",
+                    "G14",
+                    "H2",
+                    "H13"
                 ]
             },
             "16:00": {
@@ -91,12 +106,42 @@
         "letra_max": "H",
         "numeracion_maxima": 10,
         "horarios": {
+            "05:00": {
+                "asientos_ocupados": [
+                    "A1",
+                    "A2",
+                    "B1",
+                    "B2",
+                    "B3",
+                    "B4",
+                    "B5",
+                    "C2",
+                    "C3",
+                    "C6",
+                    "H5",
+                    "H6",
+                    "H7",
+                    "H8",
+                    "H9",
+                    "H10",
+                    "H3"
+                ]
+            },
+            "09:00": {
+                "asientos_ocupados": [
+                    "A6",
+                    "A7",
+                    "F2",
+                    "F5"
+                ]
+            },
             "12:30": {
                 "asientos_ocupados": []
             },
             "15:00": {
                 "asientos_ocupados": [
-                    "C1"
+                    "C1",
+                    "E3"
                 ]
             },
             "19:00": {
@@ -119,7 +164,8 @@
                 "asientos_ocupados": [
                     "A5",
                     "A8",
-                    "A9"
+                    "A9",
+                    "A7"
                 ]
             },
             "17:10": {
@@ -146,11 +192,14 @@
             "10:00": {
                 "asientos_ocupados": [
                     "A1",
-                    "A2"
+                    "A2",
+                    "A6"
                 ]
             },
             "14:00": {
-                "asientos_ocupados": []
+                "asientos_ocupados": [
+                    "L18"
+                ]
             },
             "17:15": {
                 "asientos_ocupados": []

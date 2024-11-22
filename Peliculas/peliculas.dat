@@ -118,7 +118,12 @@
         "nombre": "Toy Story 2",
         "descripcion": "Innovadora experiencia en el m\u00e1s all\u00e1",
         "duracion": "120",
-        "horarios": []
+        "horarios": [
+            {
+                "sala": 3,
+                "hora_inicio": "09:00"
+            }
+        ]
     },
     {
         "nombre": "DeadPool I",
@@ -130,5 +135,28 @@
                 "hora_inicio": "01:00"
             }
         ]
+    },
+    {
+        "nombre": "Midnight Sun",
+        "descripcion": "Una adolescente que morir\u00eda si se expusiera a la luz vive un romance de verano con el chico del que lleva a\u00f1os enamorada. A medida que su relaci\u00f3n se afianza, ella busca maneras de ocultarle la enfermedad que padece.",
+        "duracion": "92",
+        "horarios": []
+    },
+    {
+        "nombre": "Cars",
+        "descripcion": "De camino al prestigiado campeonato Copa Pist\u00f3n, un autom\u00f3vil de carreras que s\u00f3lo se preocupa por ganar aprende sobre lo que realmente es importante en la vida de varios veh\u00edculos que viven en un pueblo a lo largo de la hist\u00f3rica Ruta 66.",
+        "duracion": "117",
+        "horarios": [
+            {
+                "sala": 3,
+                "hora_inicio": "05:00"
+            }
+        ]
+    },
+    {
+        "nombre": "The Flash",
+        "descripcion": "Flash viaja a traves del tiempo para evitar el asesinato de su madre, pero, sin saberlo, provoca una serie de cambios que originan la creaci\\u00f3n de un multiverso",
+        "duracion": "154",
+        "horarios": []
     }
 ]
