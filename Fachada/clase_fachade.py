@@ -1,7 +1,7 @@
 import json
 from Interfaz_Usuario.clase_usuario import User
 from Reservas_Salas.clases_reservas import Gestor_Archivo_Salas
-from Peliculas.clases_pelicula import Cartelera, Pelicula
+from Peliculas.clases_pelicula import Gestor_Archivo_Peliculas, Pelicula
 
 class Sistema_Cine:
     def __init__(self, filepath_users, filepath_salas, filepath_peliculas):
@@ -20,19 +20,24 @@ class Sistema_Cine:
         self.precio_boleta = 45
 
         #Atributos referentes a Peliculas
-        self.archivo_peliculas = Cartelera(filepath_peliculas)
+        self.archivo_peliculas = Gestor_Archivo_Peliculas(filepath_peliculas)
         self.lista_peliculas = []
 
 
     def existencia_usuario(self, nuevo_usuario):
         for usuario in self.lista_usuarios:
-            if nuevo_usuario.email.lower() == usuario.email.lower():
+            email_user = usuario.get_email()
+            email_new_user = nuevo_usuario.get_email()
+
+            if email_new_user.lower() == email_user.lower():
                 return True
         return False
 
     def is_user_in_DB(self, email_client, password_client):
         for usuario in self.lista_usuarios:
-            if usuario.email.lower() == email_client.lower() and usuario.password == password_client:
+            email_user = usuario.get_email()
+            password_user = usuario.get_password()
+            if email_user.lower() == email_client.lower() and password_user == password_client:
                 return usuario
         return False
 
@@ -51,14 +56,14 @@ class Sistema_Cine:
         # Cargar usuarios desde el archivo
         self.lista_usuarios = self.archivo_usuarios.cargar_usuarios()
 
-    #Métodos referentes a las salas
+    #Metodos referentes a las salas
     def cargar_salas_archivo(self):
         self.lista_salas = self.archivo_salas.cargar_salas()
 
     def guardar_salas_archivo(self):
         self.archivo_salas.guardar_salas(self.lista_salas)
 
-    #Métodos referentes a las películas
+    #Metodos referentes a las peliculas
     def cargar_peliculas_archivo(self):
         self.lista_peliculas = self.archivo_peliculas.cargar_peliculas()
 
@@ -69,16 +74,6 @@ class Sistema_Cine:
         self.lista_peliculas.append(Pelicula(nombre, descripcion, duracion, []))
         self.guardar_peliculas_archivo()
 
-
-
-    #Métodos que se eliminarán
-    def ver_usuarios(self):
-        for usuario in self.lista_usuarios:
-            print(f"Nombre: {usuario.name}, Email: {usuario.email}, Contraseña: {usuario.password}\n")
-
-    def ver_info_admins(self):
-        if self.administrador_activo == True:
-            print(f"Nombre Administrador: {self.user.name}")
 
 
 class Gestor_Archivo_Usuarios:
@@ -101,15 +96,15 @@ class Gestor_Archivo_Usuarios:
                 usuarios_data = json.load(file)
                 return [self._diccionario_a_usuario(data) for data in usuarios_data]
         except FileNotFoundError:
-            print("Archivo no encontrado. Se cargará una lista vacía.")
+            print("Archivo no encontrado. Se cargara una lista vacia.")
             return []
 
     def _usuario_a_diccionario(self, usuario):
         # Convertir un objeto `User` en un diccionario
         return {
             "name": usuario.name,
-            "email": usuario.email,
-            "password": usuario.password,
+            "email": usuario.get_email(),
+            "password": usuario.get_password(),
             "num_Card": usuario.tarjeta.numero,
             "saldo": usuario.saldo,
             "esAdministrador": usuario.esAdministrador,

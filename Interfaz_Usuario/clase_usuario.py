@@ -9,29 +9,18 @@ class Tarjeta:
 class User:
     def __init__(self, name, email, password, num_Card, saldo, esAdministrador, reservations):
         self.name = name
-        self.email = email
-        self.password = password
+        self.__email = email
+        self.__password = password
         self.tarjeta = Tarjeta(num_Card)
         self.reservations = reservations
         self.esAdministrador = esAdministrador
         self.saldo = saldo
 
+    def get_password(self):
+        return self.__password
 
-    def consultar_saldo(self):
-        return f"El saldo del usuario {self.name} es de ${self.tarjeta.saldo}.\n"
-
-    def ver_reservas(self):
-        ## Estructura de una reserva
-        ## {sala: 4, horario: "13:00", asientos: [A1, A2, A3]}
-        for clave, valor in self.reservations.items():
-            if clave == "sala":
-                print(f"Sala: {valor}, ", end="")
-            elif clave == "horario":
-                print(f"Hora de inicio: {valor}")
-            else:
-                print("Asientos: ", end="")
-                for asiento in valor:
-                    print(f"{asiento}\t", end=" ")
+    def get_email(self):
+        return self.__email
 
     def agregar_reserva(self, hora_inicio, lista_asientos):
         self.reservations.append({"hora_inicio": hora_inicio, "lista_asientos": lista_asientos})

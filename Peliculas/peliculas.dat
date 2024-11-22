@@ -1,8 +1,8 @@
 [
     {
-        "nombre": "Pelicula 1",
-        "descripcion": "Una emocionante aventura que te mantendr\u00c3\u00a1 al borde de tu asiento.",
-        "duracion": "90",
+        "nombre": "El Origen",
+        "descripcion": "Un ladron especializado en el robo de secretos a traves de la imaginacion es ofrecido una oportunidad para borrar su pasado criminal. Su tarea es implantar una idea en la mente de un objetivo, lo que lleva a una serie de complicados sucesos.",
+        "duracion": "148",
         "horarios": [
             {
                 "sala": 1,
@@ -19,9 +19,9 @@
         ]
     },
     {
-        "nombre": "Pelicula 2",
-        "descripcion": "Un drama cautivador sobre las relaciones humanas.",
-        "duracion": "120",
+        "nombre": "The Matrix",
+        "descripcion": "Thomas Anderson, un hacker conocido como Neo, descubre que la realidad en la que vive es una simulacion creada por maquinas para dominar a la humanidad. Con la ayuda de Morfeo y Trinity, lucha por liberar a la humanidad de la Matrix.",
+        "duracion": "130",
         "horarios": [
             {
                 "sala": 1,
@@ -42,9 +42,9 @@
         ]
     },
     {
-        "nombre": "Pelicula 3",
-        "descripcion": "Una comedia hilarante para toda la familia.",
-        "duracion": "150",
+        "nombre": "Batman: El Caballero Oscuro",
+        "descripcion": "Batman enfrenta a un nuevo villano, el Joker, quien tiene planes para sembrar el caos en Gotham City. Con la ayuda del fiscal de distrito Harvey Dent, el Caballero Oscuro luchara para salvar la ciudad.",
+        "duracion": "152",
         "horarios": [
             {
                 "sala": 3,
@@ -65,14 +65,10 @@
         ]
     },
     {
-        "nombre": "Pelicula 4",
-        "descripcion": "Un thriller psicol\u00c3\u00b3gico que explora los rincones oscuros de la mente.",
+        "nombre": "El Padrino",
+        "descripcion": "La historia de la familia Corleone, una poderosa familia mafiosa italoamericana, liderada por Don Vito Corleone. La trama sigue la ascension de su hijo Michael a la jefatura de la familia y las complejas relaciones dentro de la mafia.",
         "duracion": "80",
         "horarios": [
-            {
-                "sala": 2,
-                "hora_inicio": "07:00"
-            },
             {
                 "sala": 4,
                 "hora_inicio": "12:00"
@@ -80,16 +76,12 @@
             {
                 "sala": 3,
                 "hora_inicio": "15:00"
-            },
-            {
-                "sala": 2,
-                "hora_inicio": "21:00"
             }
         ]
     },
     {
-        "nombre": "Pelicula 5",
-        "descripcion": "Un documental inspirador sobre la naturaleza y la vida silvestre.",
+        "nombre": "Forrest Gump",
+        "descripcion": "La historia de Forrest Gump, un hombre con un bajo coeficiente intelectual, pero un corazon puro, que de alguna manera influye en muchos eventos clave de la historia de Estados Unidos durante la segunda mitad del siglo XX.",
         "duracion": "105",
         "horarios": [
             {
@@ -140,7 +132,12 @@
         "nombre": "Midnight Sun",
         "descripcion": "Una adolescente que morir\u00eda si se expusiera a la luz vive un romance de verano con el chico del que lleva a\u00f1os enamorada. A medida que su relaci\u00f3n se afianza, ella busca maneras de ocultarle la enfermedad que padece.",
         "duracion": "92",
-        "horarios": []
+        "horarios": [
+            {
+                "sala": 2,
+                "hora_inicio": "11:00"
+            }
+        ]
     },
     {
         "nombre": "Cars",

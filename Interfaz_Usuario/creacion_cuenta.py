@@ -11,7 +11,6 @@ def clear_input_text(name_input, show_input=False):
     dpg.configure_item(name_input, show=show_input)
 
 def open_popup_create_account(gestor_cine: Sistema_Cine):
-    print("Usuario en sesión:", gestor_cine.usuario_en_sesion)
     if not gestor_cine.usuario_en_sesion:
         dpg.configure_item("create_name", show=True)
         dpg.set_value("create_name", "")
@@ -41,10 +40,8 @@ def create_account(sender, app_data, user_data):
     email = dpg.get_value("create_email").strip()
     password = dpg.get_value("create_password")
 
-    if name != ""  and email != "" and password != "": #Inputs vacíos
+    if name != ""  and email != "" and password != "": #Inputs vacios
         nuevo_usuario = User(name, email, password, "22222222000", 1200, False,[])
-
-        print(gestor_cine.existencia_usuario(nuevo_usuario))
 
         if not gestor_cine.existencia_usuario(nuevo_usuario):
             save_new_user_in_DB(gestor_cine, nuevo_usuario)
@@ -65,7 +62,7 @@ def create_account(sender, app_data, user_data):
         dpg.configure_item("message_error_account", default_value=f"Los campos no se han rellenado correctamente.", show=True, color=(255, 0, 0, 255))
 
 def setup_popup_create_account_window(gestor_cine: Sistema_Cine):
-    with dpg.window(label="Creacion de Cuenta", modal=True, show=False, tag="popup_window_create_account", width=800, height=400, pos=(1000, 400)):
+    with dpg.window(label="Creacion de Cuenta", modal=True, show=False, tag="popup_window_create_account", width=750, height=200, pos=(400, 0)):
         dpg.add_text("Ingrese sus datos: ", tag="message_text_account")
         dpg.add_input_text(tag="create_name", label="Nombre")
         dpg.add_input_text(tag="create_email", label="Email")

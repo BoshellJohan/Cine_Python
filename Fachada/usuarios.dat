@@ -4,7 +4,7 @@
         "email": "Landino.com",
         "password": "1234",
         "num_Card": "4010 2222 1222",
-        "saldo": 955,
+        "saldo": 865,
         "esAdministrador": true,
         "reservations": [
             {
@@ -41,6 +41,13 @@
                 "hora_inicio": "12:00",
                 "lista_asientos": [
                     "A7"
+                ]
+            },
+            {
+                "hora_inicio": "12:30",
+                "lista_asientos": [
+                    "C9",
+                    "G6"
                 ]
             }
         ]
@@ -143,9 +150,20 @@
         "email": "max@gmail.com",
         "password": "5678",
         "num_Card": "22222222000",
-        "saldo": 1000,
+        "saldo": 775,
         "esAdministrador": false,
-        "reservations": []
+        "reservations": [
+            {
+                "hora_inicio": "14:00",
+                "lista_asientos": [
+                    "D6",
+                    "E7",
+                    "F8",
+                    "E9",
+                    "D10"
+                ]
+            }
+        ]
     },
     {
         "name": "Juan Alejandro",
@@ -218,11 +236,11 @@
         ]
     },
     {
-        "name": "Valeria Mu\u00f1oz Ramirez",
+        "name": "Valeria Ramirez",
         "email": "val.com",
         "password": "1234",
         "num_Card": "22222222000",
-        "saldo": 1110,
+        "saldo": 1000,
         "esAdministrador": false,
         "reservations": [
             {
@@ -231,6 +249,10 @@
                     "F2",
                     "F5"
                 ]
+            },
+            {
+                "hora_inicio": "11:00",
+                "lista_asientos": []
             }
         ]
     }
