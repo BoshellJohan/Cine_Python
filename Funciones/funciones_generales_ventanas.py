@@ -1,6 +1,8 @@
 import threading
 import dearpygui.dearpygui as dpg
 
+
+
 # Función de temporizador para cerrar la ventana después de 4 segundos
 def close_popup_in_x_seconds(sec, window):
     threading.Timer(sec, lambda: dpg.hide_item(window)).start()
@@ -22,3 +24,4 @@ def eliminar_ventana_y_asientos(ventana_tag, sala_funcion):
             asiento_tag = f"{chr(letra)}{numero}_{sala_funcion.numero_sala}"
             if dpg.does_item_exist(asiento_tag):
                 dpg.delete_item(asiento_tag)
+

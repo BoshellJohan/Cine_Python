@@ -1,7 +1,7 @@
 import dearpygui.dearpygui as dpg
 from .clase_usuario import User
 from Fachada.clase_fachade import Sistema_Cine
-from Peliculas.Interfaz_Administrador import open_popup_cartelera
+from Administrador.Interfaz_Administrador import open_popup_cartelera
 from Funciones.funciones_generales_ventanas import close_popup_in_x_seconds
 
 def hide_item(item):
@@ -21,7 +21,7 @@ def open_popup_sign_in(gestor_cine: Sistema_Cine):
         if gestor_cine.administrador_activo == True:
             text = f"Administrador: {gestor_cine.user.name}\nSaldo: {gestor_cine.user.saldo}"
         else:
-            text = f"Usuario: {gestor_cine.user.name}\nSaldo: {gestor_cine.user.saldo}\nReservas:"
+            text = f"Usuario: {gestor_cine.user.name}\nSaldo: {gestor_cine.user.saldo}\n\nReservas:"
 
             # Si hay reservas, listarlas
             reservas = gestor_cine.user.reservations

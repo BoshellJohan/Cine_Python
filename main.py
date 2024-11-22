@@ -3,7 +3,7 @@ from Interfaz_Usuario.inicio_sesion import open_popup_sign_in, setup_popup_signi
 from Interfaz_Usuario.creacion_cuenta import setup_popup_create_account_window, open_popup_create_account
 from Fachada.clase_fachade import Sistema_Cine
 from Peliculas.Interfaz_Cartelera import mostrar_cartelera
-from Peliculas.Interfaz_Administrador import open_popup_cartelera
+from Administrador.Interfaz_Administrador import open_popup_cartelera
 
 
 

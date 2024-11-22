@@ -4,7 +4,7 @@
         "email": "Landino.com",
         "password": "1234",
         "num_Card": "4010 2222 1222",
-        "saldo": 1000,
+        "saldo": 955,
         "esAdministrador": true,
         "reservations": [
             {
@@ -20,6 +20,27 @@
                     "A14",
                     "A15",
                     "G7"
+                ]
+            },
+            {
+                "hora_inicio": "13:00",
+                "lista_asientos": [
+                    "G14",
+                    "H2",
+                    "H13"
+                ]
+            },
+            {
+                "hora_inicio": "01:00",
+                "lista_asientos": [
+                    "I11",
+                    "I12"
+                ]
+            },
+            {
+                "hora_inicio": "12:00",
+                "lista_asientos": [
+                    "A7"
                 ]
             }
         ]
@@ -94,6 +115,17 @@
                     "I11",
                     "A3"
                 ]
+            },
+            {
+                "hora_inicio": "01:00",
+                "lista_asientos": [
+                    "A7",
+                    "A15",
+                    "J12",
+                    "J12",
+                    "J10",
+                    "J13"
+                ]
             }
         ]
     },
@@ -114,5 +146,58 @@
         "saldo": 1000,
         "esAdministrador": false,
         "reservations": []
+    },
+    {
+        "name": "Juan Alejandro",
+        "email": "alejandro.com",
+        "password": "1234",
+        "num_Card": "22222222000",
+        "saldo": 775,
+        "esAdministrador": false,
+        "reservations": [
+            {
+                "hora_inicio": "14:00",
+                "lista_asientos": [
+                    "L18"
+                ]
+            },
+            {
+                "hora_inicio": "09:00",
+                "lista_asientos": [
+                    "A6",
+                    "A7"
+                ]
+            },
+            {
+                "hora_inicio": "15:00",
+                "lista_asientos": [
+                    "E3"
+                ]
+            },
+            {
+                "hora_inicio": "07:00",
+                "lista_asientos": [
+                    "G1",
+                    "G2"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Valeria Mu\u00f1oz Ramirez",
+        "email": "val.com",
+        "password": "1234",
+        "num_Card": "22222222000",
+        "saldo": 1110,
+        "esAdministrador": false,
+        "reservations": [
+            {
+                "hora_inicio": "09:00",
+                "lista_asientos": [
+                    "F2",
+                    "F5"
+                ]
+            }
+        ]
     }
 ]
